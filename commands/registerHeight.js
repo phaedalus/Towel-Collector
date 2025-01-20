@@ -49,7 +49,7 @@ module.exports = {
         // Convert height to centimeters
         let heightInCm;
         const cmMatch = heightInput.match(/^(\d+)\s*cm$/i); // e.g., "170cm"
-        const ftInMatch = heightInput.match(/^\s*(\d+)\s*'\s*((\d+)\s*"?)?$/); // e.g., "5'3" or 5' 3"
+        const ftInMatch = heightInput.match(/^\s*(\d+)\s*'\s*(\d+)?\s*"?\s*$/); // e.g., "5'3" or 5' 3"
 
         if (cmMatch) {
             heightInCm = parseInt(cmMatch[1], 10);
